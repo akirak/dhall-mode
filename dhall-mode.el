@@ -22,7 +22,7 @@
 ;; GNU General Public License for more details.
 
 ;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
@@ -264,7 +264,7 @@ STRING-TYPE type of string based off of Emacs syntax table types"
     (setq dhall-buffer-type-compute-timer
           (run-at-time dhall-type-check-inactivity-timeout
                        nil
-                       (apply-partially 'dhall-buffer-type-compute (current-buffer))))))
+                       (apply-partially #'dhall-buffer-type-compute (current-buffer))))))
 
 ;; The main mode functions
 ;;;###autoload
@@ -287,7 +287,7 @@ STRING-TYPE type of string based off of Emacs syntax table types"
   (setq-local indent-tabs-mode nil)
   ;; Special syntax properties for Dhall
   (setq-local syntax-propertize-function 'dhall-syntax-propertize)
-  (add-hook 'after-change-functions 'dhall-after-change nil t)
+  (add-hook 'after-change-functions #'dhall-after-change nil t)
   (when dhall-format-at-save
     (dhall-format-on-save-mode)))
 
