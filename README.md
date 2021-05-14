@@ -1,6 +1,7 @@
 # dhall-mode
 
 [![MELPA](https://melpa.org/packages/dhall-mode-badge.svg)](https://melpa.org/#/dhall-mode)
+[![Build Status](https://github.com/psibi/dhall-mode/workflows/check/badge.svg)](https://github.com/psibi/dhall-mode/actions)
 
 Emacs Major mode for working
 with [Dhall](https://github.com/dhall-lang/dhall-lang) configuration
@@ -30,10 +31,7 @@ language.
 * Basic indendation, commenting
 * Automatic formatting on save (Configurable via variable). Uses [dhall-format](https://github.com/dhall-lang/dhall-haskell) for it.
 * Error highlighting.
-
-Todo:
-
-* Add REPL support. See: https://github.com/dhall-lang/dhall-lang/issues/17
+* REPL support.
 
 ## License
 
